@@ -1,3 +1,5 @@
+# TODO: Convert to Module and remove puts
+
 class Game
 
   def initialize
