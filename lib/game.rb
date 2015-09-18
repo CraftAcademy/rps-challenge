@@ -1,30 +1,19 @@
-# TODO: Convert to Module and remove puts
+module Game
 
-class Game
-
-  def initialize
-    puts "Let's play!"
-    play
+  def self.computer_move
+    %w(R P S).sample
   end
 
-  def play
-    # Get user's choice:
-    puts "What's your choice, Rock, Paper, or Scissors? Enter R, P, or S:"
-    user_choice = gets.chomp.to_s.upcase
-    puts "You choice was: #{user_choice}"
+  def self.player_move(player_move)
+    computer_move
 
-    # Get computer's choice:
-    computer_choice = %w(R P S).sample
-
-    # See who won:
-    if user_choice == computer_choice
-      puts "Tie"
-      puts "Play again!"
-      play
-    elsif((user_choice == "R" && computer_choice == "S") || (user_choice == "P" && computer_choice == "R") || (user_choice == "S" && computer_choice =="P"))
-      puts "You won!"
+    if player_move == computer_move
+      "Tie!"
+    elsif((player_move == "R" && computer_move == "S") || (player_move == "P" && computer_move == "R") || (player_move == "S" && computer_move =="P"))
+      "You won!"
     else
-      puts "Computer won."
+      "Computer won."
     end
+
   end
 end
