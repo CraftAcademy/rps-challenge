@@ -17,7 +17,7 @@ feature 'Game Setup' do
       expect(page).to have_content 'Welcome to the Rock, Paper, Scisors game!'
     end
 
-    scenario "The 'Play Game!' buttonroutes to /play" do
+    scenario "The 'Play Game!' button routes to '/play'" do
       click_button 'Play Game!'
       expect(current_path).to eq '/play'
     end
