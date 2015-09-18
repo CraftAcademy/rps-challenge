@@ -1,4 +1,6 @@
+require 'byebug'
 require 'sinatra/base'
+require './lib/rps.rb'
 
 class RockPaperScissors < Sinatra::Base
   set :views, proc {File.join(root, '..', 'views')}
@@ -19,6 +21,10 @@ class RockPaperScissors < Sinatra::Base
 
   post '/result' do
     session[:name] = params[:name]
+    userinput = params[:item]
+    @result = play(userinput)
+    erb :result
+
   end
 
   # start the server if ruby file executed directly
