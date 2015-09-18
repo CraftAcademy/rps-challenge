@@ -31,7 +31,9 @@ describe 'game logic' do
     expect(play("knife")).to eq 'Wrong input'
   end
 
-  xit 'computer can choose a random item' do
+  it 'computer can choose a random item' do
+    computers_choice
+    expect(computers_choice).to eq 1..3
 
   end
 

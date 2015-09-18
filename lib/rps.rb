@@ -16,23 +16,23 @@ def play(item)
   if input_ok?(item)
     c = computers_choice
       if (item) == 'rock' && c == 1
-        'Oavgjort'
+        'It\'s a draw'
       elsif (item) == 'rock' && c == 2
-          'Du vann'
+          'You won!'
       elsif (item) == 'rock' && c == 3
-        'Du förlorade'
+        'You lost!'
       elsif (item) == 'paper' && c == 1
-          'Du förlorade'
+          'You lost!'
       elsif (item) == 'paper' && c == 2
-        'Oavgjort'
+        'It\'s a draw'
       elsif (item) == 'paper' && c == 3
-        'Du vann'
+        'You won!'
       elsif (item) == 'scissors' && c == 1
-          'Du vann'
+          'You won!'
       elsif (item) == 'scissors' && c == 2
-        'Du förlorade'
+        'You lost!'
       elsif (item) == 'scissors' && c == 3
-        'Oavgjort'
+        'It\'s a draw'
       end
   else
       'Wrong input'
