@@ -7,13 +7,13 @@
 
 feature 'Game Setup' do
 
-  feature 'Start View' do
+  feature 'Index view' do
 
     background do
       visit '/'
     end
 
-    scenario 'Displays welcome message' do
+    scenario 'displays the welcome message' do
       expect(page).to have_content 'Welcome to the Rock, Paper, Scissors game!'
     end
 

@@ -4,7 +4,7 @@ module Game
     %w(Rock Paper Scissors).sample
   end
 
-  def self.player_move(player_move)
+  def self.play(player_move)
     computer_move
 
     if player_move == computer_move
