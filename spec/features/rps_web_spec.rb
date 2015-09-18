@@ -29,4 +29,35 @@ feature 'Starting a new game' do
       expect(page).to have_content 'Scissors'
     end
 
+    scenario 'i can make a choice and click submit button' do
+      visit '/play'
+      fill_in 'item', :with => 'rock'
+      click_on 'submit'
+      expect(page).to have_content 'You choosed rock'
+    end
+
+    xscenario 'i can win' do
+      visit '/play'
+      fill_in 'item', :with => 'rock'
+      click_on 'submit'
+      allow(metoden_play)and_receive 3
+      expect(page).to have_content 'You won'
+    end
+
+    xscenario 'i can loose' do
+      visit '/play'
+      fill_in 'item', :with => 'rock'
+      click_on 'submit'
+      allow(metoden_play)and_receive 2
+      expect(page).to have_content 'You loose'
+    end
+
+     xscenario 'i can have draw' do
+      visit '/play'
+      fill_in 'item', :with => 'rock'
+      click_on 'submit'
+      allow(metoden_play)and_receive 1
+      expect(page).to have_content 'It is a draw'
+    end
+
 end

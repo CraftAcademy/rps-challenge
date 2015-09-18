@@ -1,6 +1,6 @@
 require 'rps'
 
-describe 'game' do
+describe 'game logic' do
 
 
   it 'player can choose rock' do
