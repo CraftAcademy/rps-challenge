@@ -27,6 +27,7 @@ class App < Sinatra::Base
     if params[:player_move] == ''
       erb :play
     else
+      @player_name = session[:player_name]
       @player_move = params[:player_move]
       @result = Game.play(@player_move)
       erb :result
