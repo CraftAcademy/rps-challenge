@@ -1,4 +1,12 @@
 <h2>Welcome to the Rock, Paper, Scissors game!</h2>
-  <form action="/play" method="get" >
-    <input type="submit" value="Play Game!">
-  </form>
+
+<form action="/play" method="post" >
+  <input type="submit" value="Old Play Game Button">
+</form>
+
+<a href="#" class="button round">Round Button</a>
+
+<form action="/play" method="post">
+  What's your name, player? <input type="text" name="player_name"><br>
+  <button class="button round" type="submit" formmethod="post" formaction="/play">Play Game!</button>
+</form>
