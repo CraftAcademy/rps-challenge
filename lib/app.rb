@@ -2,7 +2,6 @@ require 'sinatra/base'
 require './lib/game.rb'
 require 'byebug'
 
-
 class App < Sinatra::Base
   set :views, proc {File.join(root, '..', 'views')}
   enable :sessions
@@ -16,9 +15,7 @@ class App < Sinatra::Base
       erb :index
     else
       @player_name = params[:player_name]
-      # p1 = Player.new(@player_name)
       session[:player_name] = params[:player_name]
-      # session[:p1] = p1
       erb :play
     end
   end

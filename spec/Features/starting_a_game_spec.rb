@@ -14,7 +14,7 @@ feature 'Game Setup' do
     end
 
     scenario 'displays the welcome message' do
-      expect(page).to have_content 'Welcome to the Rock, Paper, Scissors game!'
+      expect(page).to have_content 'Welcome to the game!'
     end
 
     scenario "The 'Play Game!' button routes to '/play'" do
