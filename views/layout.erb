@@ -14,9 +14,15 @@
     </head>
     <body>
       <div class="row">
-        <!-- TODO: Fix so content is centered on page for all sizes -->
         <div class="small-3 small-centered columns"></div>
-        <div class="small-6 small-centered columns"><%= yield %></div>
+        <div class="small-6 small-centered columns">
+          <div class="icon-bar one-up">
+            <a href="/" class="item" >
+              <img src="img/fi-home.svg" >
+              <label>Home</label>
+            </a>
+          </div>
+        <%= yield %></div>
         <div class="small-3 small-centered columns"></div>
       </div>
       <script src="js/vendor/jquery.js"></script>
