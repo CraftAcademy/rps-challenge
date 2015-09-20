@@ -1,6 +1,7 @@
 require 'sinatra'
 require 'byebug'
 
+
 class RPSWeb < Sinatra::Base
 
 	set :views, proc { File.join(root, '..', 'views')}
@@ -12,7 +13,7 @@ class RPSWeb < Sinatra::Base
 
 
 	post '/game' do
-		
+		session[:name] = params[:name]
 		erb :game
 	end
 
