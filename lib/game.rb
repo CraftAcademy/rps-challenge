@@ -1,20 +1,33 @@
 
 module Playgame
 
-	case[name, computer]
+	def self.computer_move
+    	%w(r p s).sample
+  	end
 
-	name.value = $stdin.gets.chomp.downcase
+	def self.play(player_move)
 
-	when ['p','r'], ['s','p'], ['r','s']
+		computer = computer_move
+		
+		case[player_move, computer]
 
-	puts "\n\n\nWell done, you win!"
+			when ['p','r'], ['s','p'], ['r','s']
 
+				"You win!"
 
-	when ['p','p'], ['s','s'], ['r','s']
+			when ['p','p'], ['s','s'], ['r','s']
 
-	puts "\n\n\nIt´s a tie!"
+	    		 "It\'s a tie"
 
-	else 
-	puts "\n\n\nSorry, man, you lose!"
+			else 
+	 
+	 			"Sorry, man, you lose!"
+	
+		end
+	
+	end
+
+	
+	
 
 end
