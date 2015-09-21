@@ -1,64 +1,100 @@
 require 'spec_helper'
 require 'byebug'
 
-feature 'Starting a new game' do
-  scenario 'I am greeted' do
-    visit '/'
+feature 'game setup' do
+
+  before {visit '/'}
+
+  scenario 'is successful' do
+    expect(page.status_code).to be 200
+  end
+
+  scenario 'welcomes the player to the game' do
     expect(page).to have_content "Welcome!"
   end
 
-  scenario 'I am asked to pass in my name in a form and press continue' do
-      visit '/'
-      fill_in 'name', :with => 'Gustaf'
-      click_on 'Continue'
-      expect(page).to have_content "Gustaf"
-    end
+  scenario 'displays a user name input form' do
+    expect(page).to have_selector "form[action='/play']"
+    expect(page).to have_selector "input[type='text']"
+    expect(page).to have_selector "input[name='name']"
+  end
 
-    scenario 'I need to put in a name to continue' do
-      visit '/'
-      fill_in 'name', :with => nil
-      click_on 'Continue'
-      expect(page).to_not have_content "Gustaf"
-    end
+  scenario 'i am routed to the /play page when entering a name and pushing continue' do
+    fill_in 'name', :with => 'Gustaf'
+    click_on 'Continue'
+    expect(page.current_path).to eq '/play'
+    expect(page.status_code).to eq 200
+  end
 
-    scenario 'I am presented with choices rock, paper and scissors' do
-      visit '/'
-      fill_in 'name', :with => 'Gustaf'
-      click_on 'Continue'
-      expect(page).to have_content 'Rock'
-      expect(page).to have_content 'Paper'
-      expect(page).to have_content 'Scissors'
-    end
+  scenario 'The page remembers my name' do
+    fill_in 'name', :with => 'Gustaf'
+    click_on 'Continue'
+    expect(page).to have_content "Gustaf"
+  end
 
-    scenario 'i can make a choice and click play button' do
-      visit '/play'
-      select 'rock', :from => 'item'
-      click_on 'Play'
-      expect(current_path).to eq'/result.erb'
-    end
+  scenario 'I need to put in a name to continue' do
+    fill_in 'name', :with => nil
+    click_on 'Continue'
+    expect(page).to_not have_content "Gustaf"
+  end
 
-    xscenario 'i can win' do
-      visit '/play'
-      fill_in 'item', :with => 'rock'
-      click_on 'submit'
-      allow(computers_choice).to_return 3
-      expect(page).to have_content 'You won'
-    end
+end
 
-    # xscenario 'i can loose' do
-    #   visit '/play'
-    #   fill_in 'item', :with => 'rock'
-    #   click_on 'submit'
-    #   allow(metoden_play)and_receive 2
-    #   expect(page).to have_content 'You loose'
-    # end
+feature 'starting a game' do
 
-    #  xscenario 'i can have draw' do
-    #   visit '/play'
-    #   fill_in 'item', :with => 'rock'
-    #   click_on 'submit'
-    #   allow(metoden_play)and_receive 1
-    #   expect(page).to have_content 'It is a draw'
-    # end
+  before do
+    visit '/'
+    fill_in 'name', :with => 'Gustaf'
+    click_on 'Continue'
+  end
+
+  scenario 'displays a input form with options rock, paper, scissors' do
+    expect(page).to have_selector "form[action='/result']"
+    expect(page).to have_selector "input[type='radio']"
+    expect(page).to have_selector "input[name='item']"
+    expect(page).to have_selector "input[value='rock']"
+    expect(page).to have_selector "input[value='paper']"
+    expect(page).to have_selector "input[value='scissors']"
+  end
+
+  scenario 'I am presented with choices rock, paper and scissors' do
+    expect(page).to have_content 'Rock'
+    expect(page).to have_content 'Paper'
+    expect(page).to have_content 'Scissors'
+  end
+
+  scenario 'making a choice and pushing play routes me to the /result page' do
+    fill_in 'item', with: 'rock'
+    click_button 'Play'
+    expect(page.current_path).to eq'/result.erb'
+    expect(page.status_code).to eq 200
+  end
+
+end
+
+feature 'game results' do
+
+ before do
+    visit '/'
+    fill_in 'name', :with => 'Gustaf'
+    click_on 'Continue'
+    fill_in 'item', with: 'rock'
+    click_button 'Play'
+  end
+
+  scenario 'user beats computer with rock over scissors' do
+    allow(RockPaperScissors).to_receive and return 3
+    expect(page).to have_content 'You won'
+  end
+
+  scenario 'user looses vs computer with rock over paper' do
+    allow(RockPaperScissors).to_receive and return 3
+    expect(page).to have_content 'You won'
+  end
+
+   scenario 'user has a draw vs computer with rock over rock' do
+    allow(RockPaperScissors).to_receive and return 3
+    expect(page).to have_content 'It\'s a draw'
+  end
 
 end
