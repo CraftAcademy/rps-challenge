@@ -13,21 +13,18 @@ module Playgame
 
 			when ['p','r'], ['s','p'], ['r','s']
 
-				"You win!"
+				play_result = "You win!"
 
 			when ['p','p'], ['s','s'], ['r','s']
 
-	    		 "It\'s a tie"
+	    		play_result = "It\'s a tie"
 
 			else 
 	 
-	 			"Sorry, man, you lose!"
+	 			play_result = "Sorry, man, you lose!"
 	
 		end
 	
-	end
-
-	
-	
+	end	
 
 end

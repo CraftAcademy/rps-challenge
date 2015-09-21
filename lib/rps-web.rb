@@ -2,6 +2,7 @@ require 'sinatra'
 require 'byebug'
 
 
+
 class RPSWeb < Sinatra::Base
 
 	set :views, proc { File.join(root, '..', 'views')}
@@ -17,7 +18,12 @@ class RPSWeb < Sinatra::Base
 		erb :game
 	end
 
+	post '/result' do
+		session[:name] = params[:name]
+		@results = params[:play_result]
+		erb :result
 
+	end
 
 	run! if app_file == $0
 
