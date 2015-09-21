@@ -1,0 +1,16 @@
+<h3> What's your move, <%= @player_name %>?</h3>
+Pick one: <br>
+<ul class="inline-list">
+  <li><form action="/result" method="post">
+    <input type="hidden" value="Rock" name="player_move"><br>
+    <button class="button round" type="submit" formmethod="post" formaction="/result">Rock</button>
+  </form></li>
+  <li><form action="/result" method="post">
+    <input type="hidden" value="Paper" name="player_move"><br>
+    <button class="button round" type="submit" formmethod="post" formaction="/result">Paper</button>
+  </form></li>
+  <li><form action="/result" method="post">
+    <input type="hidden" value="Scissors" name="player_move"><br>
+    <button class="button round" type="submit" formmethod="post" formaction="/result">Scissors</button>
+  </form></li>
+</ul>
