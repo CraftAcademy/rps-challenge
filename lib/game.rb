@@ -9,11 +9,11 @@ module Playgame
 		computer = computer_move
 		case[player_move, computer]
 			when ['p','r'], ['s','p'], ['r','s']
-				play_result = "You win!"
+				play_result = "You win"
 			when ['p','p'], ['s','s'], ['r','r']
 	    		play_result = "It\'s a tie"
 			else 
-	 			play_result = "Sorry, man, you lose!"
+	 			play_result = "Sorry, man, you lose"
 		end	
 	end	
 

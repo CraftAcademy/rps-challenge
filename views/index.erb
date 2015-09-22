@@ -1,14 +1,13 @@
+<br><br><br>
+<h3>Welcome to the game!</h3>
+<form data-abide action="/game" method="post">
+  <div class="name-field">
+    <label>Hey, let´s play some Rock, Paper & Scissors. Please put in your name.  <small>required</small>
+      <input type="text" name="player_name" required pattern="[a-zA-Z]+">
+    </label>
+    <small class="error">Name is required and must be a string!</small>
+  </div>
+  <button class="button round button success button expand" type="submit" formmethod="post" formaction="/game">Play Game!</button>
+</form>
 
-<center><br><br>
-
-		<h1>Hey, let´s play some Rock, Paper, and Scissors!</h1>
-		
-		<h2>To play, add your name: </h2>
- 
-  			<form action="/game" method="post" >
-  			<input type="text" name="name">
-  			<input type="submit" value="Off to the game!">
-			</form>
-
-</center>
 

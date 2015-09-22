@@ -1,7 +1,8 @@
-<center><br><br>
-
-		<h1><h1> <%= @results %>. </h1></h1>
-
-	
-</center>
+<br><br><br>
+<h3> You picked <%= @player_move %>.</h3>
+<h3> Result: <%= @results %></h3>
+<form action="/game" method="post">
+  <input type="hidden" name="player_name" value=<%= @player_name %>>
+  <button class="button round button success button expand" type="submit" formmethod="post" formaction="/game">Play Again</button>
+</form>
 

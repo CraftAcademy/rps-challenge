@@ -1,15 +1,13 @@
 
-<center><br><br>
+<br><br><br>
 
-	<h1> Hullo, <%= session[:name] %>. Off we go!</h1>
+	<h1> Hullo, <%= @player_name %>. Off we go!</h1>
 
 	<h2> Pick r, p, or s and put it in below </h2>
-
-		<form action="/result" method="post" >
+	<ul class="inline-list">
+		<li><form action="/result" method="post" >
   			<input type="text" name="player_move">
-  			<input type="submit" value ="Play">
-		</form>
+  			<button class="button round" type="submit" formmethod="post" formaction="/result">Play</button>
+		</form></li>
 
-</center>
-
-
+  

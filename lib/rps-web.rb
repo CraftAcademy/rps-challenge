@@ -15,14 +15,15 @@ class RPSWeb < Sinatra::Base
 
 
 	post '/game' do
-		session[:name] = params[:name]
-		@player_name = params[:name]
+		session[:player_name] = params[:player_name]
+		@player_name = params[:player_name]
 		erb :game
 	end
 
 	post '/result' do
-		@player_name = params[:name]
-		@results = Playgame.play(params[:player_move.downcase])
+		@player_name = params[:player_name]
+		@player_move = params[:player_move]
+		@results = Playgame.play(@player_move.downcase)
 		erb :result
 
 	end
