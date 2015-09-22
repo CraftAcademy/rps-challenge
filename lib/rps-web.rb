@@ -1,5 +1,6 @@
 require 'sinatra'
 require 'byebug'
+require './lib/game.rb'
 
 
 
@@ -15,12 +16,13 @@ class RPSWeb < Sinatra::Base
 
 	post '/game' do
 		session[:name] = params[:name]
+		@player_name = params[:name]
 		erb :game
 	end
 
 	post '/result' do
-		session[:name] = params[:name]
-		@results = params[:play_result]
+		@player_name = params[:name]
+		@results = Playgame.play(params[:player_move.downcase])
 		erb :result
 
 	end
