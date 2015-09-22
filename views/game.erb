@@ -1,0 +1,13 @@
+
+<br><br><br>
+
+	<h1> Hullo, <%= @player_name %>. Off we go!</h1>
+
+	<h2> Pick r, p, or s and put it in below </h2>
+	<ul class="inline-list">
+		<li><form action="/result" method="post" >
+  			<input type="text" name="player_move">
+  			<button class="button round" type="submit" formmethod="post" formaction="/result">Play</button>
+		</form></li>
+
+  
