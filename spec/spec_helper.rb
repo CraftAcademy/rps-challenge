@@ -8,3 +8,6 @@ SimpleCov.formatters = [
   Coveralls::SimpleCov::Formatter
 ]
 Coveralls.wear!
+
+
+#not sure whats goign on here

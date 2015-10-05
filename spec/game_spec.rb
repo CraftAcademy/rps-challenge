@@ -19,21 +19,10 @@ describe Game do
   it "should know if there is a draw" do
     allow(player).to receive(:pick).and_return "rock"
     allow(computer).to receive(:pick).and_return "rock"
-    expect(game.winner).to eq "Draw! Try again"
+    expect(game.drawer).to eq "Draw!"
+
+  else 
+      "Lost!"
   end
 
 end
-
-
-
-
-#require 'game'
-
-#describe Game do 
-
-  	#let(:player) { Player.new }
-  	#let(:computer) { Computer.new }
-  	#let(:game) { Game.new }
-#end
-
-#want game to cooperate with the rest of the tests
