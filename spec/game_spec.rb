@@ -6,23 +6,25 @@ describe Game do
   let(:computer){Computer.new}
   let(:game){Game.new(player, computer)}
 
-  it "should have two players on initialisation" do
+  it "should have 2 players on initialisation" do
     expect(game.players.count).to eq 2
   end
 
   it "should know if there is a winner" do
-    allow(player).to receive(:pick).and_return "rock"
+    allow(player).to receive(:pick).and_return "rock" 
     allow(computer).to receive(:pick).and_return "scissors"
     expect(game.winner).to eq "You win!"
-  end
+ end
 
-  it "should know if there is a draw" do
+  it "should know if there is a tie" do
     allow(player).to receive(:pick).and_return "rock"
     allow(computer).to receive(:pick).and_return "rock"
-    expect(game.drawer).to eq "Draw!"
-
-  else 
-      "Lost!"
+    expect(game.tie).to eq "Draw!"
   end
 
+  it "should know if someone loser" do
+    allow(player).to receive(:pick).and_return "rock"
+    allow(computer).to receive(:pick).and_return "paper"
+    expect(game.loser).to eq "Lost!"
+  end
 end

@@ -2,6 +2,7 @@ require 'byebug'
 require 'capybara/rspec'
 require 'coveralls'
 require 'simplecov'
+require 'sinatra'
 
 SimpleCov.formatters = [
   SimpleCov::Formatter::HTMLFormatter,
@@ -10,4 +11,4 @@ SimpleCov.formatters = [
 Coveralls.wear!
 
 
-#not sure whats goign on here
+

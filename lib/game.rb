@@ -7,11 +7,10 @@ class Game
     @computer = computer
     @players = [player, computer]
     @beats = {
-      "rock" => ["paper"],
-      "paper" => ["scissors"],
-      "scissors" => ["rock"], 
-    }
-  end
+    "rock" => ["paper"],
+    "paper" => ["scissors"],
+    "scissors" => ["rock"], }
+ end
 
   def player
     @player
@@ -28,19 +27,3 @@ class Game
   end
 end
 
-
-
-
-
-
-
-
-
-
-	#def winning_moves 
-    	#{"rock" => "scissors", "scissors" => "paper", "paper" => "rock"}
-  #end
-
-#I want to define winning moves
-#want it to understand when you win, lose, draw.
-#Moves
