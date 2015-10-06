@@ -20,10 +20,16 @@ class Game
     @computer
   end
 
-  def winner
-    return "Draw!" if @player.pick == @computer.pick
-    return "Lost! " if @beats[@player.pick].include? @computer.pick 
+  def winner 
     return "You win!" if @beats[computer.pick].include? @player.pick
   end
+
+  def drawer
+    return "Draw!" if @player.pick == @computer.pick
+  end
+
+  def loser
+    return "Lost!" if @beats[@player.pick].include? @computer.pick
+  end 
 end
 

@@ -16,10 +16,10 @@ describe Game do
     expect(game.winner).to eq "You win!"
  end
 
-  it "should know if there is a tie" do
+  it "should know if there is a draw" do
     allow(player).to receive(:pick).and_return "rock"
     allow(computer).to receive(:pick).and_return "rock"
-    expect(game.tie).to eq "Draw!"
+    expect(game.drawer).to eq "Draw!"
   end
 
   it "should know if someone loser" do
