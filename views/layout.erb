@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!--[if IE 9]>
+<html class="lt-ie10" lang="en" >
+  <![endif]-->
+  <html class="no-js" lang="en" >
+    <head>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>RPS Game</title>
+      <!-- normalize.css and modernizr.js help with browser compatibility -->
+      <link rel="stylesheet" href="css/normalize.css">
+      <link rel="stylesheet" href="css/foundation.css">
+      <script src="js/vendor/modernizr.js"></script>
+    </head>
+    <body>
+      <div class="row">
+        <div class="small-3 small-centered columns"></div>
+        <div class="small-6 small-centered columns">
+          <nav class="top-bar" data-topbar role="navigation">
+            <ul class="title-area">
+              <li class="name">
+                <h1><a href="/"><strong>Rock, Paper, Scissors</strong></a></h1>
+              </li>
+            </ul>
+          </nav>
+          <!-- <div class="icon-bar one-up">
+            <a href="/" class="item" >
+              <img src="img/fi-home.svg" >
+              <label>Start Over</label>
+            </a>
+          </div> -->
+        <%= yield %></div>
+        <div class="small-3 small-centered columns"></div>
+      </div>
+      <script src="js/vendor/jquery.js"></script>
+      <script src="js/foundation.min.js"></script>
+      <script>
+      $(document).foundation();
+      </script>
+    </body>
+  </html>

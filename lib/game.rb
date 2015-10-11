@@ -1,11 +1,11 @@
 class Game
 
-  attr_reader :players
+  attr_reader :players, :beats
 
   def initialize(player, computer)
     @player = player
     @computer = computer
-    @players = [player, computer]
+    #@players = [player, computer]
     @beats = {
     "rock" => ["paper"],
     "paper" => ["scissors"],
@@ -21,7 +21,12 @@ class Game
   end
 
   def winner 
-    return "You win!" if @beats[computer.pick].include? @player.pick
+    if self.player.pick == self.computer.pick
+      'it is a draw'
+    else
+      'i have no clue'
+    end
+    #return "You win!" if @beats[computer.pick].include? @player.pick
   end
 
   def drawer

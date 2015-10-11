@@ -1,6 +1,6 @@
 class Player
 
-  attr_accessor :name
+  attr_accessor :name, :pick
 
   def initialize(name)
     @name = name
@@ -10,7 +10,7 @@ class Player
     @name
   end
 
-  def pick(value)
+  def make_pick(value)
     @pick = value
   end
 end
