@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7200ba16-1518-41aa-9200-4bb522c657de" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/game.rb" afterPath="$PROJECT_DIR$/lib/game.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/game_spec.rb" afterPath="$PROJECT_DIR$/spec/game_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spec/player_spec.rb" afterPath="$PROJECT_DIR$/spec/player_spec.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="rps-challenge.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,11 +35,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="game.rb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="game.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lib/game.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.84">
-              <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+            <state vertical-scroll-proportion="0.0">
+              <caret line="37" column="3" selection-start-line="37" selection-start-column="3" selection-end-line="37" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -53,11 +55,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="player_spec.rb" pinned="false" current-in-tab="false">
+      <file leaf-file-name="player_spec.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/spec/player_spec.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.624">
+              <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -99,7 +101,7 @@
             <state vertical-scroll-proportion="0.0">
               <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding>
-                <marker date="1444642926000" expanded="true" signature="239:242" placeholder="do ... end" />
+                <marker date="1444643715000" expanded="true" signature="239:242" placeholder="do ... end" />
               </folding>
             </state>
           </provider>
@@ -139,6 +141,7 @@
         <option value="$PROJECT_DIR$/views/index.erb" />
         <option value="$PROJECT_DIR$/lib/rps_web.rb" />
         <option value="$PROJECT_DIR$/lib/game.rb" />
+        <option value="$PROJECT_DIR$/spec/player_spec.rb" />
       </list>
     </option>
   </component>
@@ -178,7 +181,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -228,6 +230,7 @@
         </subPane>
       </pane>
       <pane id="Scope" />
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -417,7 +420,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1444642926000" expanded="true" signature="239:242" placeholder="do ... end" />
+            <marker date="1444643715000" expanded="true" signature="239:242" placeholder="do ... end" />
           </folding>
         </state>
       </provider>
@@ -483,7 +486,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1444642926000" expanded="true" signature="239:242" placeholder="do ... end" />
+            <marker date="1444643715000" expanded="true" signature="239:242" placeholder="do ... end" />
           </folding>
         </state>
       </provider>
@@ -718,7 +721,7 @@
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1444642926000" expanded="true" signature="239:242" placeholder="do ... end" />
+            <marker date="1444643715000" expanded="true" signature="239:242" placeholder="do ... end" />
           </folding>
         </state>
       </provider>
@@ -771,18 +774,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/spec/player_spec.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/lib/game.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.84">
-          <caret line="35" column="5" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.0">
+          <caret line="37" column="3" selection-start-line="37" selection-start-column="3" selection-end-line="37" selection-end-column="3" />
           <folding />
         </state>
       </provider>
@@ -791,6 +786,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spec/player_spec.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.624">
+          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
           <folding />
         </state>
       </provider>

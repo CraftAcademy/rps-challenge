@@ -23,8 +23,8 @@ describe Game do
   end
 
   it "should know if someone loser" do
-    allow(player).to receive(:pick).and_return "rock"
-    allow(computer).to receive(:pick).and_return "paper"
+    allow(player).to receive(:pick).and_return "paper"
+    allow(computer).to receive(:pick).and_return "rock"
     expect(game.loser).to eq "Lost!"
   end
 end
