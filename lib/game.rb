@@ -29,4 +29,10 @@ class Game
       'You win!'
     end
   end
+
+  def loser
+    if self.player.pick ='scissors' && self.computer.pick ='rock'
+      'Lost!'
+    end
+  end
 end
