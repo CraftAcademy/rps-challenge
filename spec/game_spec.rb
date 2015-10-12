@@ -6,9 +6,9 @@ describe Game do
   let(:computer){Computer.new}
   let(:game){Game.new(player, computer)}
 
-  it "should have 2 players on initialisation" do
-    expect(game.players.count).to eq 2
-  end
+  #it "should have 2 players on initialisation" do
+   # expect(game.players.count).to eq 2
+  #end
 
   it "should know if there is a winner" do
     allow(player).to receive(:pick).and_return "rock" 
