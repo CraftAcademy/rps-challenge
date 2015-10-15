@@ -92,10 +92,11 @@ DEPENDENCIES
   byebug
   capybara
   coveralls
+  rack
   rspec
   rubocop
   rubocop-rspec
   sinatra
 
 BUNDLED WITH
-   1.10.5
+   1.10.6
