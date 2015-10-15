@@ -11,4 +11,6 @@ SimpleCov.formatters = [
 Coveralls.wear!
 
 
-
+get '/hi' do
+  "Hello World!"
+end

@@ -13,4 +13,5 @@ class Player
   def make_pick(value)
     @pick = value
   end
+
 end

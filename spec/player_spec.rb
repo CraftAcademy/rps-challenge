@@ -9,8 +9,19 @@ describe Player do
     	 expect(player.name).to eq "David"
   end
 
-  it 'can pick' do
+  it 'can pick Paper' do
      player.pick = 'paper'
      expect(player.pick).to eq 'paper'
-   end
+  end
+
+  it 'can pick Rock' do
+    player.pick = 'rock'
+    expect(player.pick).to eq 'rock'
+  end
+
+  it 'can pick Scissors' do
+    player.pick = 'scissors'
+    expect(player.pick).to eq 'scissors'
+  end
 end
+

@@ -35,4 +35,5 @@ class Game
       'Lost!'
     end
   end
+
 end

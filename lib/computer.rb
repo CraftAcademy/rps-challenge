@@ -8,7 +8,9 @@ class Computer
   
   def computer_pick
   		rand(1..3)
-    end
+  end
+
+
 end
 
 

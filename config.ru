@@ -3,5 +3,4 @@ require 'bundler'
 
 Bundler.require
 
-require './RPSApp'
-run RPSApp
+run RPSchallenge
